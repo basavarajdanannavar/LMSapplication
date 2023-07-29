@@ -11,13 +11,11 @@ public class ClientCreationwithfullData extends LoginwithValidCredential {
 public void ClickOnCreateClient() throws InterruptedException {
 	Actions action = new Actions(driver);
 	
-	Thread.sleep(5000);
-	System.out.println(driver.findElement(By.xpath("/html/body/mifosx-web-app/mifosx-shell/mat-sidenav-container/mat-sidenav-content/mifosx-content/mifosx-home/div[1]/div/button/span[1]")).isDisplayed());
+	Thread.sleep(2000);
 
-	WebElement Institution = driver.findElement(By.cssSelector("#mat-tab-link-0"));
-	Institution.isDisplayed();
-	System.out.println(Institution.isDisplayed());
-	action.contextClick(Institution).perform();
+
+	driver.findElement(By.id("mat-tab-link-3")).click();
+	
 	driver.findElement(By.cssSelector("[_ngcontent-rao-c260 mat-menu-item routerlink ='/clients']")).click();
 }
 

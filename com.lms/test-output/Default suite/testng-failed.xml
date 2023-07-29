@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ClientCreation.ClientCreationwithfullData">
+      <class name="User.CreateUser">
         <methods>
           <include name="setUp"/>
-          <include name="ClickOnCreateClient"/>
+          <include name="FillupTheForm"/>
         </methods>
-      </class> <!-- ClientCreation.ClientCreationwithfullData -->
+      </class> <!-- User.CreateUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
