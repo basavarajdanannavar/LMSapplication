@@ -1,5 +1,9 @@
 package User;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -12,17 +16,24 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.google.common.io.Files;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CreateUser extends LoginwithValidCredential {
+public class AdminRoleCreation extends LoginwithValidCredential {
 	public WebDriver driver;
 	public Workbook workbook;
 	public Sheet sheet;
@@ -90,8 +101,8 @@ public class CreateUser extends LoginwithValidCredential {
 
 	}
 
-	@Test(priority = 1)
-	public void FillupTheForm() throws InterruptedException, EncryptedDocumentException, IOException {
+	@Test(priority = 2)
+	public void FillupTheForm() throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
 		Thread.sleep(2000);
 		FileInputStream file = new FileInputStream(".//DataFiles//Usercreation.xlsx");
 		Workbook workbook = WorkbookFactory.create(file);
@@ -109,8 +120,8 @@ public class CreateUser extends LoginwithValidCredential {
 			String lastname = getCellValueAsString(row.getCell(3));
 
 			// Enter the username
-		/*	WebElement usernamefield =driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-create-user/div/mat-card/form/mat-card-content/div/mat-form-field[1]/div/div[1]/div"));
-			usernamefield.isDisplayed();
+			WebElement usernamefield =driver.findElement(By.id("mat-input-5"));
+			usernamefield.sendKeys(username);
 			// Enter the email
 			driver.findElement(By.id("mat-input-6")).sendKeys(email);
 			// Enter the firstname
@@ -122,13 +133,69 @@ public class CreateUser extends LoginwithValidCredential {
 			driver.findElement(By.id("mat-option-17")).click();
 			//select the role
 			driver.findElement(By.id("mat-select-value-17")).click();
-			driver.findElement(By.id("mat-option-23")).click(); */
+			driver.findElement(By.id("mat-option-26")).click(); 
+			
+			Robot r= new Robot();
+			
+			r.keyPress(KeyEvent.VK_ESCAPE);
+			r.keyRelease(KeyEvent.VK_ESCAPE);
+			
+			//click on submit
+			driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-create-user/div/mat-card/form/mat-card-actions/button[2]")).click();
 			//click on submit
 			driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-create-user/div/mat-card/form/mat-card-actions/button[2]")).click();
 			
-
 		}
-
+		}
+	
+	@Test(priority = 4)
+	public void DataVerification() throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
+		Thread.sleep(2000);
+		
+		WebElement Loginname = driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-view-user/div[2]/mat-card/mat-card-content/div[1]/div[2]"));
+		
+		Assert.assertEquals(Loginname.getText(), "basu.danu");
+		
+		WebElement Fname= driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-view-user/div[2]/mat-card/mat-card-content/div[1]/div[4]"));
+		WebElement Lname= driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-view-user/div[2]/mat-card/mat-card-content/div[1]/div[6]"));
+		WebElement mail= driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-view-user/div[2]/mat-card/mat-card-content/div[1]/div[8]"));
+		Assert.assertEquals(Fname.getText(), "basu");
+		Assert.assertEquals(Lname.getText(), "danu");
+		Assert.assertEquals(mail.getText(), "abc@gmail.com");
+	}
+	
+	
+	@Test(priority = 5)
+		public void DeleteUser() throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
+			Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"mifosx-shell-container\"]/mat-sidenav-content/mifosx-content/mifosx-view-user/div[1]/button[2]")).click();
+		
+		TakesScreenshot ts= (TakesScreenshot) driver;
+		File src=ts.getScreenshotAs(OutputType.FILE);
+		File desc=new File(".//DataFiles//screen.png");
+		Files.copy(src, desc);
+		
+	
+	Actions action=new  Actions(driver);
+	Robot r=new Robot();
+	r.mouseMove(770, 480);
+	
+	Thread.sleep(3000);
+	
+	
+	r.keyPress(KeyEvent.VK_TAB);
+	r.keyRelease(KeyEvent.VK_TAB);
+	r.keyPress(KeyEvent.VK_ENTER);
+	r.keyRelease(KeyEvent.VK_ENTER);
+	
+		
+	} 
+	
+	
+	@AfterClass
+	public void closeBrowser() {
+		driver.close();
 	}
 
 	private static String getCellValueAsString(Cell cell) {

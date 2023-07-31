@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="User.CreateUser">
+      <class name="User.EditTheRole">
         <methods>
+          <include name="EditApplication"/>
+          <include name="DataVerification"/>
           <include name="setUp"/>
-          <include name="FillupTheForm"/>
         </methods>
-      </class> <!-- User.CreateUser -->
+      </class> <!-- User.EditTheRole -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
