@@ -33,7 +33,7 @@ import com.google.common.io.Files;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class EditTheRole extends LoginwithValidCredential {
+public class addRolesToUser extends LoginwithValidCredential {
 	public WebDriver driver;
 	public Workbook workbook;
 	public Sheet sheet;
