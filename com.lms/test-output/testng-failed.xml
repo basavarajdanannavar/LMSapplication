@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="User.ChangeUserPassword">
+      <class name="ClientCreation.SearchClient">
         <methods>
-          <include name="ChangePassword"/>
-          <include name="RememberMe"/>
-          <include name="GotoUser"/>
+          <include name="Search"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- User.ChangeUserPassword -->
+      </class> <!-- ClientCreation.SearchClient -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
