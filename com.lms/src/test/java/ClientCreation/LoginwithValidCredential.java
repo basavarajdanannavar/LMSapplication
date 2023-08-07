@@ -68,7 +68,7 @@ public class LoginwithValidCredential {
 	    		WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button[1]"));
 	    		loginButton.click();
 
-            Thread.sleep(10000);	 }         
+            Thread.sleep(1000);	 }         
 }
 	        private static String getCellValueAsString(Cell cell) {
 		        if (cell == null) {

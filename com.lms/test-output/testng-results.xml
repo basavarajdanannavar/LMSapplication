@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-02T11:08:58 IST" name="Default suite" finished-at="2023-08-02T11:09:55 IST" duration-ms="57060">
+  <suite started-at="2023-08-04T18:09:18 IST" name="Default suite" finished-at="2023-08-04T18:09:55 IST" duration-ms="36835">
     <groups>
     </groups>
-    <test started-at="2023-08-02T11:08:58 IST" name="Default test" finished-at="2023-08-02T11:09:55 IST" duration-ms="57060">
-      <class name="ClientCreation.SearchClient">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ClientCreation.SearchClient@233795b6]" started-at="2023-08-02T11:08:58 IST" name="setUp" finished-at="2023-08-02T11:09:01 IST" duration-ms="3538" status="PASS">
+    <test started-at="2023-08-04T18:09:18 IST" name="Default test" finished-at="2023-08-04T18:09:55 IST" duration-ms="36835">
+      <class name="ClientCreation.UploadProfileImage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ClientCreation.UploadProfileImage@3eb738bb]" started-at="2023-08-04T18:09:18 IST" name="setUp" finished-at="2023-08-04T18:09:23 IST" duration-ms="4076" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="RememberMe()[pri:0, instance:ClientCreation.SearchClient@233795b6]" started-at="2023-08-02T11:09:01 IST" name="RememberMe" finished-at="2023-08-02T11:09:53 IST" duration-ms="51472" status="PASS">
+        <test-method signature="RememberMe()[pri:0, instance:ClientCreation.UploadProfileImage@3eb738bb]" started-at="2023-08-04T18:09:23 IST" name="RememberMe" finished-at="2023-08-04T18:09:49 IST" duration-ms="26194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RememberMe -->
-        <test-method signature="Search()[pri:2, instance:ClientCreation.SearchClient@233795b6]" started-at="2023-08-02T11:09:53 IST" name="Search" finished-at="2023-08-02T11:09:55 IST" duration-ms="1940" status="PASS">
+        <test-method signature="GotoClientDetailsPage()[pri:1, instance:ClientCreation.UploadProfileImage@3eb738bb]" started-at="2023-08-04T18:09:49 IST" name="GotoClientDetailsPage" finished-at="2023-08-04T18:09:52 IST" duration-ms="3492" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Search -->
-      </class> <!-- ClientCreation.SearchClient -->
+        </test-method> <!-- GotoClientDetailsPage -->
+        <test-method signature="UploadImage()[pri:2, instance:ClientCreation.UploadProfileImage@3eb738bb]" started-at="2023-08-04T18:09:52 IST" name="UploadImage" finished-at="2023-08-04T18:09:55 IST" duration-ms="2938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadImage -->
+      </class> <!-- ClientCreation.UploadProfileImage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
