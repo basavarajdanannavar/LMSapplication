@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="47" passed="46" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-17T14:32:18 IST" name="Suite" finished-at="2023-10-17T14:41:19 IST" duration-ms="540972">
+    <groups>
+    </groups>
+    <test started-at="2023-10-17T14:32:18 IST" name="Test" finished-at="2023-10-17T14:41:19 IST" duration-ms="540972">
+      <class name="SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO@327514f]" started-at="2023-10-17T14:35:51 IST" name="Browser" finished-at="2023-10-17T14:35:52 IST" duration-ms="1343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO@327514f]" started-at="2023-10-17T14:35:52 IST" name="Login" finished-at="2023-10-17T14:35:59 IST" duration-ms="6591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ChargeFormOpen()[pri:2, instance:SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO@327514f]" started-at="2023-10-17T14:35:59 IST" name="ChargeFormOpen" finished-at="2023-10-17T14:36:30 IST" duration-ms="30866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChargeFormOpen -->
+        <test-method signature="ChargeFillup()[pri:3, instance:SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO@327514f]" started-at="2023-10-17T14:36:30 IST" name="ChargeFillup" finished-at="2023-10-17T14:36:57 IST" duration-ms="26983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChargeFillup -->
+        <test-method signature="CloseBrowser()[pri:4, instance:SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO@327514f]" started-at="2023-10-17T14:36:57 IST" name="CloseBrowser" finished-at="2023-10-17T14:36:57 IST" duration-ms="548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO -->
+      <class name="SingleCollateralCompletionTestCases.ReleaseMovementComplete">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.ReleaseMovementComplete@4c12331b]" started-at="2023-10-17T14:38:24 IST" name="Browser" finished-at="2023-10-17T14:38:26 IST" duration-ms="1840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.ReleaseMovementComplete@4c12331b]" started-at="2023-10-17T14:38:26 IST" name="Login" finished-at="2023-10-17T14:38:32 IST" duration-ms="6464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="StartTrip()[pri:2, instance:SingleCollateralCompletionTestCases.ReleaseMovementComplete@4c12331b]" started-at="2023-10-17T14:38:32 IST" name="StartTrip" finished-at="2023-10-17T14:38:48 IST" duration-ms="15971" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartTrip -->
+        <test-method signature="TrackOngoingTrip()[pri:3, instance:SingleCollateralCompletionTestCases.ReleaseMovementComplete@4c12331b]" started-at="2023-10-17T14:38:48 IST" name="TrackOngoingTrip" finished-at="2023-10-17T14:39:29 IST" duration-ms="40699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TrackOngoingTrip -->
+        <test-method signature="CloseBrowser()[pri:4, instance:SingleCollateralCompletionTestCases.ReleaseMovementComplete@4c12331b]" started-at="2023-10-17T14:39:29 IST" name="CloseBrowser" finished-at="2023-10-17T14:39:29 IST" duration-ms="462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.ReleaseMovementComplete -->
+      <class name="SingleCollateralCompletionTestCases.AddCollateral">
+        <test-method is-config="true" signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:32:19 IST" name="Browser" finished-at="2023-10-17T14:32:22 IST" duration-ms="3336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:32:22 IST" name="Login" finished-at="2023-10-17T14:32:28 IST" duration-ms="6526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="AddCollaterl()[pri:2, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:32:28 IST" name="AddCollaterl" finished-at="2023-10-17T14:32:34 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.Login" duration-ms="5839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddCollaterl -->
+        <test-method signature="AddPacketWithPacketID(java.lang.String)[pri:3, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:32:34 IST" name="AddPacketWithPacketID" data-provider="Packet ID" finished-at="2023-10-17T14:32:38 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddCollaterl" duration-ms="3288" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MAG0100000050138]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddPacketWithPacketID -->
+        <test-method signature="AddOrnaments()[pri:4, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:32:38 IST" name="AddOrnaments" finished-at="2023-10-17T14:32:56 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddPacketWithPacketID" duration-ms="18260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddOrnaments -->
+        <test-method signature="SubmitCollateral()[pri:5, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:32:56 IST" name="SubmitCollateral" finished-at="2023-10-17T14:33:24 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddOrnaments" duration-ms="28170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubmitCollateral -->
+        <test-method signature="CloseBrowser()[pri:6, instance:SingleCollateralCompletionTestCases.AddCollateral@34e9fd99]" started-at="2023-10-17T14:33:24 IST" name="CloseBrowser" finished-at="2023-10-17T14:33:25 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.SubmitCollateral" duration-ms="659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.AddCollateral -->
+      <class name="SingleCollateralCompletionTestCases.ChargeClosureByBM">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.ChargeClosureByBM@7586beff]" started-at="2023-10-17T14:39:29 IST" name="Browser" finished-at="2023-10-17T14:39:30 IST" duration-ms="1215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.ChargeClosureByBM@7586beff]" started-at="2023-10-17T14:39:30 IST" name="Login" finished-at="2023-10-17T14:39:37 IST" duration-ms="6800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ChargeClosure()[pri:2, instance:SingleCollateralCompletionTestCases.ChargeClosureByBM@7586beff]" started-at="2023-10-17T14:39:37 IST" name="ChargeClosure" finished-at="2023-10-17T14:40:11 IST" duration-ms="33906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChargeClosure -->
+        <test-method signature="OwnChargeClosure(java.lang.String)[pri:3, instance:SingleCollateralCompletionTestCases.ChargeClosureByBM@7586beff]" started-at="2023-10-17T14:40:11 IST" name="OwnChargeClosure" data-provider="Collateral" finished-at="2023-10-17T14:40:42 IST" duration-ms="30548" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[014526000168]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[6]/div[1]/form/div[2]/textarea"}
+  (Session info: chrome=117.0.5938.152)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [86c971764428a043585c034a580a2222, findElement {using=xpath, value=/html/body/div[6]/div[1]/form/div[2]/textarea}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.152, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54650/devtoo..., se:cdpVersion: 117.0.5938.152, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 86c971764428a043585c034a580a2222]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[6]/div[1]/form/div[2]/textarea"}
+  (Session info: chrome=117.0.5938.152)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [86c971764428a043585c034a580a2222, findElement {using=xpath, value=/html/body/div[6]/div[1]/form/div[2]/textarea}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.152, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54650/devtoo..., se:cdpVersion: 117.0.5938.152, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 86c971764428a043585c034a580a2222
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at SingleCollateralCompletionTestCases.ChargeClosureByBM.OwnChargeClosure(ChargeClosureByBM.java:116)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OwnChargeClosure -->
+        <test-method signature="CloseBrowser()[pri:4, instance:SingleCollateralCompletionTestCases.ChargeClosureByBM@7586beff]" started-at="2023-10-17T14:40:42 IST" name="CloseBrowser" finished-at="2023-10-17T14:40:42 IST" duration-ms="551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.ChargeClosureByBM -->
+      <class name="SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM@1165b38]" started-at="2023-10-17T14:37:29 IST" name="Browser" finished-at="2023-10-17T14:37:30 IST" duration-ms="1261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM@1165b38]" started-at="2023-10-17T14:37:30 IST" name="Login" finished-at="2023-10-17T14:37:36 IST" duration-ms="6451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ChargeReleaseForm()[pri:2, instance:SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM@1165b38]" started-at="2023-10-17T14:37:36 IST" name="ChargeReleaseForm" finished-at="2023-10-17T14:37:57 IST" duration-ms="20360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChargeReleaseForm -->
+        <test-method signature="RequestClosure()[pri:3, instance:SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM@1165b38]" started-at="2023-10-17T14:37:57 IST" name="RequestClosure" finished-at="2023-10-17T14:38:23 IST" duration-ms="26450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RequestClosure -->
+        <test-method signature="CloseBrowser()[pri:4, instance:SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM@1165b38]" started-at="2023-10-17T14:38:23 IST" name="CloseBrowser" finished-at="2023-10-17T14:38:24 IST" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM -->
+      <class name="SingleCollateralCompletionTestCases.CollateralRelease">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.CollateralRelease@3b69e7d1]" started-at="2023-10-17T14:40:42 IST" name="Browser" finished-at="2023-10-17T14:40:44 IST" duration-ms="1326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.CollateralRelease@3b69e7d1]" started-at="2023-10-17T14:40:44 IST" name="Login" finished-at="2023-10-17T14:40:50 IST" duration-ms="6725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CollateralRelease(java.lang.String)[pri:2, instance:SingleCollateralCompletionTestCases.CollateralRelease@3b69e7d1]" started-at="2023-10-17T14:40:50 IST" name="CollateralRelease" data-provider="Collateral" finished-at="2023-10-17T14:41:19 IST" duration-ms="28655" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[014526000168]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollateralRelease -->
+        <test-method signature="CloseBrowser()[pri:3, instance:SingleCollateralCompletionTestCases.CollateralRelease@3b69e7d1]" started-at="2023-10-17T14:41:19 IST" name="CloseBrowser" finished-at="2023-10-17T14:41:19 IST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.CollateralRelease -->
+      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.ApproveCollateralByBM@22ff4249]" started-at="2023-10-17T14:33:25 IST" name="Browser" finished-at="2023-10-17T14:33:26 IST" duration-ms="1339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.ApproveCollateralByBM@22ff4249]" started-at="2023-10-17T14:33:26 IST" name="Login" finished-at="2023-10-17T14:33:33 IST" duration-ms="6590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CollateralAdditionLink()[pri:2, instance:SingleCollateralCompletionTestCases.ApproveCollateralByBM@22ff4249]" started-at="2023-10-17T14:33:33 IST" name="CollateralAdditionLink" finished-at="2023-10-17T14:34:14 IST" duration-ms="41256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollateralAdditionLink -->
+        <test-method signature="CloseBrowser()[pri:3, instance:SingleCollateralCompletionTestCases.ApproveCollateralByBM@22ff4249]" started-at="2023-10-17T14:34:14 IST" name="CloseBrowser" finished-at="2023-10-17T14:34:14 IST" duration-ms="525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.ApproveCollateralByBM -->
+      <class name="SingleCollateralCompletionTestCases.ChargeConfirmationByBM">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.ChargeConfirmationByBM@5b12b668]" started-at="2023-10-17T14:36:57 IST" name="Browser" finished-at="2023-10-17T14:36:59 IST" duration-ms="1207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.ChargeConfirmationByBM@5b12b668]" started-at="2023-10-17T14:36:59 IST" name="Login" finished-at="2023-10-17T14:37:05 IST" duration-ms="6314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="OpenCharges()[pri:2, instance:SingleCollateralCompletionTestCases.ChargeConfirmationByBM@5b12b668]" started-at="2023-10-17T14:37:05 IST" name="OpenCharges" finished-at="2023-10-17T14:37:28 IST" duration-ms="23180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenCharges -->
+        <test-method signature="CloseBrowser()[pri:3, instance:SingleCollateralCompletionTestCases.ChargeConfirmationByBM@5b12b668]" started-at="2023-10-17T14:37:28 IST" name="CloseBrowser" finished-at="2023-10-17T14:37:29 IST" duration-ms="540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.ChargeConfirmationByBM -->
+      <class name="SingleCollateralCompletionTestCases.RequestMovementCompletionByFO">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.RequestMovementCompletionByFO@4c402120]" started-at="2023-10-17T14:35:03 IST" name="Browser" finished-at="2023-10-17T14:35:05 IST" duration-ms="1251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.RequestMovementCompletionByFO@4c402120]" started-at="2023-10-17T14:35:05 IST" name="Login" finished-at="2023-10-17T14:35:12 IST" duration-ms="7481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="StartTrip()[pri:2, instance:SingleCollateralCompletionTestCases.RequestMovementCompletionByFO@4c402120]" started-at="2023-10-17T14:35:12 IST" name="StartTrip" finished-at="2023-10-17T14:35:28 IST" duration-ms="15900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartTrip -->
+        <test-method signature="TrackOngoingTrip()[pri:3, instance:SingleCollateralCompletionTestCases.RequestMovementCompletionByFO@4c402120]" started-at="2023-10-17T14:35:28 IST" name="TrackOngoingTrip" finished-at="2023-10-17T14:35:51 IST" duration-ms="22504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TrackOngoingTrip -->
+        <test-method signature="CloseBrowser()[pri:4, instance:SingleCollateralCompletionTestCases.RequestMovementCompletionByFO@4c402120]" started-at="2023-10-17T14:35:51 IST" name="CloseBrowser" finished-at="2023-10-17T14:35:51 IST" duration-ms="431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- SingleCollateralCompletionTestCases.RequestMovementCompletionByFO -->
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM">
+        <test-method signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM@2d1ef81a]" started-at="2023-10-17T14:34:14 IST" name="Browser" finished-at="2023-10-17T14:34:16 IST" duration-ms="1273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM@2d1ef81a]" started-at="2023-10-17T14:34:16 IST" name="Login" finished-at="2023-10-17T14:34:18 IST" duration-ms="2475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="SearchCollateral()[pri:2, instance:SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM@2d1ef81a]" started-at="2023-10-17T14:34:18 IST" name="SearchCollateral" finished-at="2023-10-17T14:34:31 IST" duration-ms="12741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchCollateral -->
+        <test-method signature="ChargeRequestFormFillup()[pri:3, instance:SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM@2d1ef81a]" started-at="2023-10-17T14:34:31 IST" name="ChargeRequestFormFillup" finished-at="2023-10-17T14:35:03 IST" duration-ms="32474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChargeRequestFormFillup -->
+      </class> <!-- SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
