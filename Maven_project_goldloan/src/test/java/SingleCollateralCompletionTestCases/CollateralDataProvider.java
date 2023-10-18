@@ -16,7 +16,7 @@ public class CollateralDataProvider {
 		public Object[] dataSet2() {
 			return new Object[][] {
 		
-				{"MAG0100000050138"}
+				{"MAG0100000050142"}
 				
 				
 			};

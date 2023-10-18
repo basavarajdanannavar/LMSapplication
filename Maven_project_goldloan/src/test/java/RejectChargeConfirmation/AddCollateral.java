@@ -155,7 +155,7 @@ WebElement CollateralNo =	driver.findElement(By.xpath("/html/body/div[2]/div[1]/
 	rb.delay(2000);
 	
 
-	  StringSelection check=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\download (1).jpg");
+	  StringSelection check=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\download (1).jpg");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check, null);
 	  rb.keyPress(KeyEvent.VK_CONTROL);
 	  rb.keyPress(KeyEvent.VK_V);
@@ -214,7 +214,7 @@ WebElement CollateralNo =	driver.findElement(By.xpath("/html/body/div[2]/div[1]/
 
 	rb1.delay(2000);
 
-	  StringSelection check1=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\download.jpg");
+	  StringSelection check1=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\download.jpg");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check1, null);
 	  rb1.keyPress(KeyEvent.VK_CONTROL);
 	  rb1.keyPress(KeyEvent.VK_V);
@@ -253,7 +253,7 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 
 	rb2.delay(2000);
 
-	  StringSelection check2=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\customer_appraisal_certificate_010126001974.pdf");
+	  StringSelection check2=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\customer_appraisal_certificate_010126001974.pdf");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check2, null);
 	  rb2.keyPress(KeyEvent.VK_CONTROL);
 	  rb2.keyPress(KeyEvent.VK_V);
@@ -277,7 +277,7 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 
 		rb2.delay(2000);
 
-		  StringSelection check3=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\internal_appraisal_certificate_010126001974 (1).pdf");
+		  StringSelection check3=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\internal_appraisal_certificate_010126001974 (1).pdf");
 		  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check3, null);
 		  rb3.keyPress(KeyEvent.VK_CONTROL);
 		  rb3.keyPress(KeyEvent.VK_V);

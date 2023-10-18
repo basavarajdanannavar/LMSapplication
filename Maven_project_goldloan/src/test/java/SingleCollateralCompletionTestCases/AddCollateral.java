@@ -1,10 +1,33 @@
 
 package SingleCollateralCompletionTestCases;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.sl.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.awt.AWTException;
 import java.io.FileDescriptor;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.awt.Robot;
@@ -16,6 +39,9 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Timeouts;
@@ -83,14 +109,39 @@ public void AddCollaterl() throws InterruptedException {
 	driver.findElement(By.xpath("//div[contains(text(),'Continue')]")).click();
 	}
 @Test(dependsOnMethods = { "AddCollaterl" },dataProvider="Packet ID",dataProviderClass = CollateralDataProvider.class,priority=3)
-public void AddPacketWithPacketID(String PacketID) {
+public void AddPacketWithPacketID(String PacketID) throws EncryptedDocumentException, IOException {
 	
 	// Click on Add PAcket 
 	driver.findElement(By.xpath("//div[contains(text(),'+ New Packet')]")).click();
-	//Allow without Packet ID
-	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[5]/div[1]/div[3]/input")).sendKeys(PacketID);
+	//Allow with Packet ID
+	FileInputStream file = new FileInputStream(".//PacketIDList//Book1.xlsx");
+    Workbook workbook = null;
+	try {
+		workbook = WorkbookFactory.create(file);
+	} catch (EncryptedDocumentException | IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    @SuppressWarnings("rawtypes")
+	org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheet("sheet1");
+
+    // Loop through the rows and perform the login test cases
+    for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+        Row row = sheet.getRow(i);
+        String PacketID1 = getCellValueAsString(row.getCell(2));
+	
+	
+	
+WebElement Packet =	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[5]/div[1]/div[3]/input"));
+Packet.sendKeys(PacketID1);
 	driver.findElement(By.xpath("//div[contains(text(),'Add')]")).click();
 }
+}
+private String getCellValueAsString(Cell cell) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
 @Test(dependsOnMethods = { "AddPacketWithPacketID" },priority=4)
 public void AddOrnaments() throws InterruptedException, IOException, AWTException {
 
@@ -155,7 +206,7 @@ WebElement CollateralNo =	driver.findElement(By.xpath("/html/body/div[2]/div[1]/
 	rb.delay(2000);
 	
 
-	  StringSelection check=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\download (1).jpg");
+	  StringSelection check=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\download (1).jpg");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check, null);
 	  rb.keyPress(KeyEvent.VK_CONTROL);
 	  rb.keyPress(KeyEvent.VK_V);
@@ -214,7 +265,7 @@ WebElement CollateralNo =	driver.findElement(By.xpath("/html/body/div[2]/div[1]/
 
 	rb1.delay(2000);
 
-	  StringSelection check1=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\download.jpg");
+	  StringSelection check1=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\download.jpg");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check1, null);
 	  rb1.keyPress(KeyEvent.VK_CONTROL);
 	  rb1.keyPress(KeyEvent.VK_V);
@@ -253,7 +304,7 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 
 	rb2.delay(2000);
 
-	  StringSelection check2=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\customer_appraisal_certificate_010126001974.pdf");
+	  StringSelection check2=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\customer_appraisal_certificate_010126001974.pdf");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check2, null);
 	  rb2.keyPress(KeyEvent.VK_CONTROL);
 	  rb2.keyPress(KeyEvent.VK_V);
@@ -277,7 +328,7 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 
 		rb2.delay(2000);
 
-		  StringSelection check3=  new StringSelection("C:\\Users\\Lenovo\\OneDrive\\Desktop\\Gold Loan Photos\\internal_appraisal_certificate_010126001974 (1).pdf");
+		  StringSelection check3=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\internal_appraisal_certificate_010126001974 (1).pdf");
 		  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check3, null);
 		  rb3.keyPress(KeyEvent.VK_CONTROL);
 		  rb3.keyPress(KeyEvent.VK_V);

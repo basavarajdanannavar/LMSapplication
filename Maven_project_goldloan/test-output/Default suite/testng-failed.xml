@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM">
+      <class name="SingleCollateralCompletionTestCases.AddCollateral">
         <methods>
-          <include name="CollateralAdditionLink"/>
+          <include name="AddOrnaments"/>
+          <include name="CloseBrowser"/>
+          <include name="SubmitCollateral"/>
+          <include name="Browser"/>
+          <include name="AddPacketWithPacketID" invocation-numbers="0"/>
+          <include name="AddCollaterl"/>
+          <include name="Login"/>
         </methods>
-      </class> <!-- SingleCollateralCompletionTestCases.ApproveCollateralByBM -->
+      </class> <!-- SingleCollateralCompletionTestCases.AddCollateral -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
