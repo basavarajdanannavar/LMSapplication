@@ -87,7 +87,7 @@ public class ChargeClosureByBM  {
 	}
 	
 	
-@Test(dataProvider="Collateral",dataProviderClass = CollateralDataProvider.class,priority=3)
+@Test(priority=3)
 public void OwnChargeClosure(String collateral) throws InterruptedException {
 	//click on the Search Icon 
 	driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/span[1]/img")).click();

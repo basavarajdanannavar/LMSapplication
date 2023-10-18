@@ -36,7 +36,7 @@ public class CollateralRelease {
 		driver.findElement(By.cssSelector("[placeholder='Enter your password']")).sendKeys("P@ssw0rd");
 		driver.findElement(By.cssSelector("[ng-click='auth.validate()']")).click();
 		}
-	@Test(dataProvider="Collateral",dataProviderClass = CollateralDataProvider.class,priority=2)
+	@Test(priority=2)
 	public void CollateralRelease(String collateral) throws InterruptedException {
 		Thread.sleep(2000);
 		//Click on Collateral Additions

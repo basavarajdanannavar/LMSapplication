@@ -9,7 +9,7 @@
           <include name="CloseBrowser"/>
           <include name="SubmitCollateral"/>
           <include name="Browser"/>
-          <include name="AddPacketWithPacketID" invocation-numbers="0"/>
+          <include name="AddPacketWithPacketID"/>
           <include name="AddCollaterl"/>
           <include name="Login"/>
         </methods>

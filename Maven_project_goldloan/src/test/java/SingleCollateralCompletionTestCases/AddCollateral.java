@@ -1,9 +1,17 @@
 
 package SingleCollateralCompletionTestCases;
 
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import java.io.File;
+import java.io.FileInputStream;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.sl.usermodel.Sheet;
@@ -108,39 +116,103 @@ public void AddCollaterl() throws InterruptedException {
 	
 	driver.findElement(By.xpath("//div[contains(text(),'Continue')]")).click();
 	}
-@Test(dependsOnMethods = { "AddCollaterl" },dataProvider="Packet ID",dataProviderClass = CollateralDataProvider.class,priority=3)
-public void AddPacketWithPacketID(String PacketID) throws EncryptedDocumentException, IOException {
+@Test(dependsOnMethods = { "AddCollaterl" },dataProvider="Packet ID",priority=3)
+public void AddPacketWithPacketID(String PacketID) throws EncryptedDocumentException, IOException, InterruptedException {
 	
 	// Click on Add PAcket 
 	driver.findElement(By.xpath("//div[contains(text(),'+ New Packet')]")).click();
 	//Allow with Packet ID
-	FileInputStream file = new FileInputStream(".//PacketIDList//Book1.xlsx");
-    Workbook workbook = null;
-	try {
-		workbook = WorkbookFactory.create(file);
-	} catch (EncryptedDocumentException | IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-    @SuppressWarnings("rawtypes")
-	org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheet("sheet1");
 
-    // Loop through the rows and perform the login test cases
-    for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-        Row row = sheet.getRow(i);
-        String PacketID1 = getCellValueAsString(row.getCell(2));
-	
-	
-	
-WebElement Packet =	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[5]/div[1]/div[3]/input"));
-Packet.sendKeys(PacketID1);
-	driver.findElement(By.xpath("//div[contains(text(),'Add')]")).click();
-}
-}
-private String getCellValueAsString(Cell cell) {
-	// TODO Auto-generated method stub
-	return null;
-}
+
+	// Specify the Excel file path
+	String excelFilePath = ".//PacketIDList//Book2.xlsx";
+
+	FileInputStream fileInputStream = new FileInputStream(new File(excelFilePath));
+	Workbook workbook = new XSSFWorkbook(fileInputStream);
+	org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheet("Sheet1"); // Replace with your sheet name
+    // Specify the starting row and column index
+    int startRowIndex = 1; // Replace with the starting row index
+    int columnIndex = 0; // Replace with the column index (0 for the first column)
+
+    // Iterate through the cells to find the first non-null value
+    String cellValue = null;
+    for (int rowIndex = startRowIndex; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
+        Row row = sheet.getRow(rowIndex);
+        if (row != null) {
+            Cell cell = row.getCell(columnIndex);
+            if (cell != null) {
+                if (cell.getCellType() == CellType.STRING) {
+                    cellValue = cell.getStringCellValue();
+                }
+            }
+        }
+        // If a non-null value is found, break the loop
+        if (cellValue != null && !cellValue.isEmpty()) {
+            break;
+        }
+    }
+
+    // Perform actions with the found cellValue
+    if (cellValue != null) {
+        // Do something with the cellValue
+    	WebElement Packet =	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[5]/div[1]/div[3]/input"));
+    	Packet.sendKeys(cellValue);
+    } else {
+        System.out.println("No non-null value found.");
+    }
+    
+    System.out.println(cellValue);
+    
+    String targetValue = cellValue; // Replace with the value you are searching for
+
+    // Iterate through the cells to search for the target value
+    Cell foundCell = null;
+    for (Row row : sheet) {
+        for (Cell cell : row) {
+            if (cell != null && cell.getCellType() == CellType.STRING) {
+                String cellValue1 = cell.getStringCellValue();
+                if (cellValue1.equals(targetValue)) {
+                    foundCell = cell;
+                    break;
+                }
+            }
+        }
+        if (foundCell != null) {
+            break;
+        }
+    }
+
+
+   
+        int rowIndex2 = foundCell.getRowIndex();
+        int columnIndex2 = foundCell.getColumnIndex();
+        
+        System.out.println(rowIndex2);
+        System.out.println(columnIndex2);
+
+
+        
+        Row row = sheet.getRow(foundCell.getRowIndex());
+        if (row != null) {
+            Cell cell1 = row.getCell(0);
+            if (cell1 != null) {
+                // Clear the cell value
+                cell1.setCellValue("");
+
+                // Close the input stream
+                fileInputStream.close();
+
+                // Save the modified Excel file
+                FileOutputStream outputStream = new FileOutputStream(excelFilePath);
+                workbook.write(outputStream);
+                outputStream.close();
+            }
+        }
+        driver.findElement(By.xpath("//div[contains(text(),'Add')]")).click();
+    } 
+
+
+
 
 @Test(dependsOnMethods = { "AddPacketWithPacketID" },priority=4)
 public void AddOrnaments() throws InterruptedException, IOException, AWTException {

@@ -82,7 +82,7 @@ public void AddCollaterl() throws InterruptedException {
 	
 	driver.findElement(By.xpath("//div[contains(text(),'Continue')]")).click();
 	}
-@Test(dependsOnMethods = { "AddCollaterl" },dataProvider="Packet ID",dataProviderClass = CollateralDataProvider.class,priority=3)
+@Test(dependsOnMethods = { "AddCollaterl" },dataProvider="Packet ID",priority=3)
 public void AddPacketWithPacketID(String PacketID) {
 	
 	// Click on Add PAcket 
