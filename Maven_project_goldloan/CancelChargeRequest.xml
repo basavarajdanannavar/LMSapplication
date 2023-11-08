@@ -3,10 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="NegativeTestCases.ApproveCollateralByBM"/>
-      <class name="NegativeTestCases.ChargeAndMovementRequestByBM"/>
-      <class name="NegativeTestCases.cancelChargeRequestByBM"/>
-
+      <class name="SingleCollateralCompletionTestCases.AddCollateral"/>
+      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM"/>
+      <class name="cancelChargeRequestByBM.cancelChargeRequestByBM"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

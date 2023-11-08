@@ -41,7 +41,7 @@ public class ChargeConfirmationByBM  {
 	@Test(priority=2)
 	public void OpenCharges() throws AWTException, InterruptedException {
 		Thread.sleep(2000);
-		//Click on Charge Additions
+		//click on ChargeAdditions 
 		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[3]/strong")).click();
 		Thread.sleep(2000);
 		//click on the Search Icon 
@@ -57,6 +57,7 @@ public class ChargeConfirmationByBM  {
 		        } catch (IOException e) {
 		            e.printStackTrace();
 		        }
+			Thread.sleep(2000);
 				
 				
 				

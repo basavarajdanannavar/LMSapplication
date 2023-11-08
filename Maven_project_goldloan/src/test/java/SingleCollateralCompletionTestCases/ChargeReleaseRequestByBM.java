@@ -91,7 +91,7 @@ public class ChargeReleaseRequestByBM {
 		driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/div/div[2]/form/div[2]/select")).click();
 		
 		Thread.sleep(1000);
-		driver.findElement(By.cssSelector("[value='157']")).click();
+		driver.findElement(By.cssSelector("[value='8']")).click();
 		//Click on Request Closure
 		driver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div/div")).click();
 		Thread.sleep(6000);

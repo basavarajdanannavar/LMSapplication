@@ -81,7 +81,7 @@ public void Browser() {
 	@Test(priority=1)
 	public void Login()  throws InterruptedException {
 		
-driver.get("https://ims-dev.technovative.in/#/auth/loginm");
+driver.get("https://ims-dev.technovative.in/#/auth/login");
 		
 		Thread.sleep(5000);
 		
@@ -98,15 +98,15 @@ public void AddCollaterl() throws InterruptedException {
 	driver.findElement(By.cssSelector("[placeholder='Select state']")).click();
 	Thread.sleep(1000);
 	
-	driver.findElement(By.xpath("//strong[contains(text(),'Other')]")).click();
+	driver.findElement(By.xpath("//strong[contains(text(),'Karnataka')]")).click();
 	//District	
 	driver.findElement(By.cssSelector("[placeholder='Select district']")).click();
-	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/div/input")).sendKeys("Thane");
+	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/div/input")).sendKeys("North Area");
 	
 	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/ul/li")).click();
 	//Branch
 	driver.findElement(By.cssSelector("[placeholder='Select branch']")).click();
-	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/div/input")).sendKeys("Dharwad");
+	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/div/input")).sendKeys("Hubli");
 	
 	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/ul/li")).click();
 	//Internal Appraiser
@@ -116,8 +116,8 @@ public void AddCollaterl() throws InterruptedException {
 	
 	driver.findElement(By.xpath("//div[contains(text(),'Continue')]")).click();
 	}
-@Test(dependsOnMethods = { "AddCollaterl" },dataProvider="Packet ID",priority=3)
-public void AddPacketWithPacketID(String PacketID) throws EncryptedDocumentException, IOException, InterruptedException {
+@Test(priority=3)
+public void AddPacketWithPacketID() throws EncryptedDocumentException, IOException, InterruptedException {
 	
 	// Click on Add PAcket 
 	driver.findElement(By.xpath("//div[contains(text(),'+ New Packet')]")).click();
@@ -253,7 +253,7 @@ WebElement CollateralNo =	driver.findElement(By.xpath("/html/body/div[2]/div[1]/
 	driver.findElement(By.cssSelector("[ng-click='ornamentType.open()']")).click();
 	
 
-	driver.findElement(By.cssSelector("#ornamentTypeScroll > div > ul > li:nth-child(10)")).click();
+	driver.findElement(By.cssSelector("#ornamentTypeScroll > div > ul > li:nth-child(8)")).click();
 	
 	//driver.findElement(By.xpath("//*[@id=\"ornamentTypeScroll\"]/div/ul/li[1]")).click();
 	
@@ -337,7 +337,7 @@ WebElement CollateralNo =	driver.findElement(By.xpath("/html/body/div[2]/div[1]/
 
 	rb1.delay(2000);
 
-	  StringSelection check1=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\download.jpg");
+	  StringSelection check1=  new StringSelection("C:\\Users\\Lenovo\\git\\repository\\Maven_project_goldloan\\Photos\\Khda.jpeg");
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(check1, null);
 	  rb1.keyPress(KeyEvent.VK_CONTROL);
 	  rb1.keyPress(KeyEvent.VK_V);

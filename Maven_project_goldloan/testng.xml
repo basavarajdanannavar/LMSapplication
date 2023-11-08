@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="TestLMS">
+<suite thread-count="5" name="Suite">
+  <test thread-count="4" name="ApproveCollateral">
     <classes>
+      <class name="SingleCollateralCompletionTestCases.AddCollateral"/>
       <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM"/>
-      <class name="SingleCollateralCompletionTestCases.AddCollateral2"/>
+
     </classes>
-  </test> <!-- TestLMS -->
+  </test> <!-- ApproveCollateral -->
 </suite> <!-- Suite -->

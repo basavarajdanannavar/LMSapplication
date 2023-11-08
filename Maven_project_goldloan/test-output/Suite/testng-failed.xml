@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="ApproveCollateral(failed)">
     <classes>
-      <class name="SingleCollateralCompletionTestCases.ChargeClosureByBM">
+      <class name="SingleCollateralCompletionTestCases.AddCollateral">
         <methods>
-          <include name="OwnChargeClosure" invocation-numbers="0"/>
+          <include name="AddOrnaments"/>
+          <include name="CloseBrowser"/>
+          <include name="Browser"/>
+          <include name="SubmitCollateral"/>
+          <include name="AddPacketWithPacketID"/>
         </methods>
-      </class> <!-- SingleCollateralCompletionTestCases.ChargeClosureByBM -->
+      </class> <!-- SingleCollateralCompletionTestCases.AddCollateral -->
+      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM">
+        <methods>
+          <include name="CollateralAdditionLink"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- SingleCollateralCompletionTestCases.ApproveCollateralByBM -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ApproveCollateral(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ClientCreation.UploadProfileImage">
+      <class name="LoginTCs.LoginTest">
         <methods>
+          <include name="testLogin"/>
           <include name="setUp"/>
-          <include name="UploadImage"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- ClientCreation.UploadProfileImage -->
+      </class> <!-- LoginTCs.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

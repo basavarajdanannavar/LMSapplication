@@ -10,8 +10,6 @@
           <include name="SubmitCollateral"/>
           <include name="Browser"/>
           <include name="AddPacketWithPacketID"/>
-          <include name="AddCollaterl"/>
-          <include name="Login"/>
         </methods>
       </class> <!-- SingleCollateralCompletionTestCases.AddCollateral -->
     </classes>

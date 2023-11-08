@@ -88,12 +88,21 @@ public class ChargeClosureByBM  {
 	
 	
 @Test(priority=3)
-public void OwnChargeClosure(String collateral) throws InterruptedException {
+public void OwnChargeClosure() throws InterruptedException {
 	//click on the Search Icon 
 	driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/span[1]/img")).click();
 	Thread.sleep(2000);
 	//Pass the Search details
-	driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/input")).sendKeys(collateral);
+	try {
+        // Read the text from a file
+        String filePath = "C:\\Users\\Lenovo\\Downloads\\console_output.txt";
+        String textFromFile = new String(Files.readAllBytes(Paths.get(filePath)));
+    	driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/input")).sendKeys(textFromFile);
+		Thread.sleep(5000);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+Thread.sleep(2000);
 	Thread.sleep(2000);
 	//Click on the Search Link
 	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div/div[2]/div/div"));

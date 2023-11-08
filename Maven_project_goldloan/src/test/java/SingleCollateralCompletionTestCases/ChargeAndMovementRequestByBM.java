@@ -94,7 +94,7 @@ Thread.sleep(1000);
 		//Click on State
 		driver.findElement(By.xpath("//html/body/div[2]/div[2]/div/div/form/select-location/div[1]/input")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/ul/li[3]")).click();
+		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/ul/li[2]")).click();
 		
 		r.mouseWheel(2);
 		Thread.sleep(1000);
@@ -111,7 +111,7 @@ Thread.sleep(1000);
 		
 			//District
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[2]/input")).click();
-		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/div/input")).sendKeys("Thane");
+		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/div/input")).sendKeys("North Area");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/ul/li")).click();
 		
@@ -130,7 +130,7 @@ Thread.sleep(1000);
 		
 		//Click on Branch
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[3]/input")).click();
-		driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/div/form/select-location/div[5]/div/div/input")).sendKeys("Dharward - HDFC");
+		driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/div/form/select-location/div[5]/div/div/input")).sendKeys("HDFC-Dharwad");
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/ul/li")).click();
 		
 		
@@ -158,8 +158,8 @@ driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[3]/div[1]/div[1]/div[1]
 }
 	
 	
-	//@Test(priority=4)
+	@Test(priority=4)
 	public void CloseBrowser() {
-	//	driver.close();
+		driver.close();
 	}
 }

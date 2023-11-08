@@ -37,7 +37,7 @@ public class CollateralRelease {
 		driver.findElement(By.cssSelector("[ng-click='auth.validate()']")).click();
 		}
 	@Test(priority=2)
-	public void CollateralRelease(String collateral) throws InterruptedException {
+	public void CollateralRelease() throws InterruptedException {
 		Thread.sleep(2000);
 		//Click on Collateral Additions
 		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[1]/strong")).click();

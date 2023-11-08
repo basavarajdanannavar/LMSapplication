@@ -3,13 +3,14 @@
 <suite name="Suite">
   <test thread-count="1" name="Test">
     <classes>
-      <class name="RejectCollateralRelease.ApproveCollateralByBM"/>
-      <class name="RejectCollateralRelease.ChargeAndMovementRequestByBM"/>
-      <class name="RejectCollateralRelease.RequestMovementCompletionByFO"/>
-      <class name="RejectCollateralRelease.RequestChargeConfirmationByFO"/>
-      <class name="RejectCollateralRelease.ChargeConfirmationByBM"/>
-      <class name="RejectCollateralRelease.ChargeReleaseRequestByBM"/>
-      <class name="RejectCollateralRelease.ReleaseMovementComplete"/>
+      <class name="SingleCollateralCompletionTestCases.AddCollateral"/>
+      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.RequestMovementCompletionByFO"/> 
+      <class name="SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeConfirmationByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ReleaseMovementComplete"/>
       <class name="RejectCollateralRelease.RejectChargeClosureByBM"/>
       <class name="RejectCollateralRelease.RejectCollateralRelease"/>
     </classes>

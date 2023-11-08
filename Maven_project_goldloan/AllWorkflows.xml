@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="SingleCollateralCompletionTestCases.DraftCollateralCreation"/>     
+      <class name="SingleCollateralCompletionTestCases.DraftCollateralSubmission"/>
+      <class name="SingleCollateralCompletionTestCases.RejectCollateralByBM2"/>
+      <class name="SingleCollateralCompletionTestCases.ResubmitRejectedCollateral"/>
+      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.cancelChargeRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.RequestMovementCompletionByFO"/>
+      <class name="SingleCollateralCompletionTestCases.CancelChargeAfterMovement"/>
+      <class name="SingleCollateralCompletionTestCases.RequestMovementCompletionByFO"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.RequestMovementCompletionByFO"/>
+      <class name="SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO"/>   
+      <class name="SingleCollateralCompletionTestCases.RejectChargeConfirmationByBM"/>
+      <class name="SingleCollateralCompletionTestCases.RequestChargeConfirmationByFO"/> 
+      <class name="SingleCollateralCompletionTestCases.ChargeConfirmationByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeReleaseRequestByBM"/>
+      <class name="SingleCollateralCompletionTestCases.ReleaseMovementComplete"/>
+      <class name="SingleCollateralCompletionTestCases.ChargeClosureByBM"/>
+      <class name="SingleCollateralCompletionTestCases.CollateralRelease"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

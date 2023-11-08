@@ -1,44 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-18T13:08:48 IST" name="Default suite" finished-at="2023-10-18T13:10:00 IST" duration-ms="71754">
+  <suite started-at="2023-11-08T17:11:50 IST" name="Default suite" finished-at="2023-11-08T17:13:08 IST" duration-ms="78076">
     <groups>
     </groups>
-    <test started-at="2023-10-18T13:08:48 IST" name="Default test" finished-at="2023-10-18T13:10:00 IST" duration-ms="71754">
+    <test started-at="2023-11-08T17:11:50 IST" name="Default test" finished-at="2023-11-08T17:13:08 IST" duration-ms="78076">
       <class name="SingleCollateralCompletionTestCases.AddCollateral">
-        <test-method is-config="true" signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:08:48 IST" name="Browser" finished-at="2023-10-18T13:08:53 IST" duration-ms="4882" status="PASS">
+        <test-method is-config="true" signature="Browser()[pri:0, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:11:50 IST" name="Browser" finished-at="2023-11-08T17:11:54 IST" duration-ms="4304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Browser -->
-        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:08:53 IST" name="Login" finished-at="2023-10-18T13:08:59 IST" duration-ms="6130" status="PASS">
+        <test-method signature="Login()[pri:1, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:11:54 IST" name="Login" finished-at="2023-11-08T17:12:12 IST" duration-ms="18032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="AddCollaterl()[pri:2, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:08:59 IST" name="AddCollaterl" finished-at="2023-10-18T13:09:05 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.Login" duration-ms="5881" status="PASS">
+        <test-method signature="AddCollaterl()[pri:2, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:12:12 IST" name="AddCollaterl" finished-at="2023-11-08T17:12:19 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.Login" duration-ms="7429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddCollaterl -->
-        <test-method signature="AddPacketWithPacketID(java.lang.String)[pri:3, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:09:05 IST" name="AddPacketWithPacketID" data-provider="Packet ID" finished-at="2023-10-18T13:09:12 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddCollaterl" duration-ms="6589" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[MAG0100000050142]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="AddPacketWithPacketID()[pri:3, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:12:19 IST" name="AddPacketWithPacketID" finished-at="2023-11-08T17:12:28 IST" duration-ms="8339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddPacketWithPacketID -->
-        <test-method signature="AddOrnaments()[pri:4, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:09:12 IST" name="AddOrnaments" finished-at="2023-10-18T13:09:30 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddPacketWithPacketID" duration-ms="18837" status="PASS">
+        <test-method signature="AddOrnaments()[pri:4, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:12:28 IST" name="AddOrnaments" finished-at="2023-11-08T17:12:53 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddPacketWithPacketID" duration-ms="24696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddOrnaments -->
-        <test-method signature="SubmitCollateral()[pri:5, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:09:30 IST" name="SubmitCollateral" finished-at="2023-10-18T13:09:59 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddOrnaments" duration-ms="28386" status="PASS">
+        <test-method signature="SubmitCollateral()[pri:5, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:12:53 IST" name="SubmitCollateral" finished-at="2023-11-08T17:13:08 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.AddOrnaments" duration-ms="15090" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[2]/div[5]/div[1]/div[1]/div[2]/div[1]"}
+  (Session info: chrome=119.0.6045.106)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cf7dad49007df716bf74c9c00a6c50d6, findElement {using=xpath, value=/html[1]/body[1]/div[2]/div[5]/div[1]/div[1]/div[2]/div[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56469/devtoo..., se:cdpVersion: 119.0.6045.106, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cf7dad49007df716bf74c9c00a6c50d6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[2]/div[5]/div[1]/div[1]/div[2]/div[1]"}
+  (Session info: chrome=119.0.6045.106)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cf7dad49007df716bf74c9c00a6c50d6, findElement {using=xpath, value=/html[1]/body[1]/div[2]/div[5]/div[1]/div[1]/div[2]/div[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56469/devtoo..., se:cdpVersion: 119.0.6045.106, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cf7dad49007df716bf74c9c00a6c50d6
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at SingleCollateralCompletionTestCases.AddCollateral.SubmitCollateral(AddCollateral.java:363)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubmitCollateral -->
-        <test-method signature="CloseBrowser()[pri:6, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-10-18T13:09:59 IST" name="CloseBrowser" finished-at="2023-10-18T13:10:00 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.SubmitCollateral" duration-ms="867" status="PASS">
+        <test-method signature="CloseBrowser()[pri:6, instance:SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]" started-at="2023-11-08T17:13:08 IST" name="CloseBrowser" finished-at="2023-11-08T17:13:08 IST" depends-on-methods="SingleCollateralCompletionTestCases.AddCollateral.SubmitCollateral" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method SingleCollateralCompletionTestCases.AddCollateral.CloseBrowser() on instance SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c depends on not successfully finished methods 
+[SingleCollateralCompletionTestCases.AddCollateral.SubmitCollateral() on instance SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method SingleCollateralCompletionTestCases.AddCollateral.CloseBrowser() on instance SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c depends on not successfully finished methods 
+[SingleCollateralCompletionTestCases.AddCollateral.SubmitCollateral() on instance SingleCollateralCompletionTestCases.AddCollateral@6a6cb05c]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
