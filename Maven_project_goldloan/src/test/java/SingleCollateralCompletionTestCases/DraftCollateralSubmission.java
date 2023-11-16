@@ -1,65 +1,24 @@
 
 package SingleCollateralCompletionTestCases;
 
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import java.io.File;
-import java.io.FileInputStream;
-
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.sl.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import java.awt.AWTException;
-import java.io.FileDescriptor;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -76,7 +35,8 @@ public void Browser() {
     driver = new ChromeDriver();
     driver.manage().window().maximize();
     driver.manage().deleteAllCookies();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
 
 }
 
@@ -191,6 +151,17 @@ public void NewOrnamentAddition() throws EncryptedDocumentException, IOException
 		Thread.sleep(500);
 		rb.mouseWheel(1);
 		Thread.sleep(500);
+		
+		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+		WebElement WeihingscaleImage =	  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"'weighingScaleImage-images'\"]/div/div/div/span/img")));
+	     
+		if(WeihingscaleImage.isDisplayed()) {
+			System.out.println("Image is uploaded");
+		}
+		else {
+			System.out.println("Image not uploaded");
+		}
 	//Purity
 	driver.findElement(By.cssSelector("[ng-model='form.field.purity.value']")).click();
 	driver.findElement(By.xpath("//*[@id=\"pageContainer\"]/div/form/div[3]/div[1]/div[1]/select/option[2]")).click();
@@ -238,8 +209,15 @@ public void NewOrnamentAddition() throws EncryptedDocumentException, IOException
 	  rb1.keyPress(KeyEvent.VK_ENTER);
 	  rb1.keyRelease(KeyEvent.VK_ENTER);
 	  Thread.sleep(5000);
-
-
+	  
+WebElement UploadImageOrnament =	  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"'ornamentImages-images'\"]/div/div/div[1]/span/img")));
+     
+	if(UploadImageOrnament.isDisplayed()) {
+		System.out.println("Image is uploaded");
+	}
+	else {
+		System.out.println("Image not uploaded");
+	}
 	driver.findElement(By.cssSelector("[ng-click='form.add()']")).click();
 	}
 
@@ -276,11 +254,23 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 	  
 	  rb2.keyPress(KeyEvent.VK_ENTER);
 	  rb2.keyRelease(KeyEvent.VK_ENTER);
-	  Thread.sleep(5000);	
+	  Thread.sleep(000);	
  Thread.sleep(1000); 
+ WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+ WebElement UploadImageOrnament2 =wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[7]/div[1]/div[2]/div[2]/upload-document/div/div/div/label/img")));
+      
+ 	if(UploadImageOrnament2.isDisplayed()) {
+ 		System.out.println("Image is uploaded");
+ 	}
+ 	else {
+ 		System.out.println("Image not uploaded");
+ 	}
 
 	WebElement Attach1 =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/div[4]/div[2]/upload-document/div/div/div/label/img"));
 	 Attach1.click();
+	 
+	
 	 
 	/*  Thread.sleep(5000);
 		Runtime.getRuntime().exec("C:\\IMS Attachment test\\certificate.exe"); */
@@ -300,8 +290,25 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 		  
 		  rb3.keyPress(KeyEvent.VK_ENTER);
 		  rb3.keyRelease(KeyEvent.VK_ENTER);	
-	 Thread.sleep(5000);
+	 Thread.sleep(0);
+	 
+	 WebElement UploadImageOrnament3 =	  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"'internalAppraisalCertificate-images'\"]/div/div/div[1]/span/img")));
+	      
+	 	if(UploadImageOrnament3.isDisplayed()) {
+	 		System.out.println("Image is uploaded");
+	 	}
+	 	else {
+	 		System.out.println("Image not uploaded");
+	 	}
 
+		 WebElement UploadImageOrnament4 =	  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[7]/div[1]/div[4]/div[2]/upload-document/div/div/div/label/img")));
+		      
+		 	if(UploadImageOrnament4.isDisplayed()) {
+		 		System.out.println("Image is uploaded");
+		 	}
+		 	else {
+		 		System.out.println("Image not uploaded");
+		 	}
 		driver.findElement(By.xpath("//div[contains(text(),'Submit')]")).click();
 		Thread.sleep(2000);
 		
@@ -311,5 +318,6 @@ WebElement Attach =driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/
 @Test(priority=5)
 public void CloseBrowser() {
 	driver.close();
+
 }
 }

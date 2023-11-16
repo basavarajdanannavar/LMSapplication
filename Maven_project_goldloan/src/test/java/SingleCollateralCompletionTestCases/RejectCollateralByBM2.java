@@ -108,7 +108,7 @@ public class RejectCollateralByBM2   {
 }
 	@Test(priority=3)
 	public void CloseBrowser() {
-	//	driver.close();
+		driver.close();
 	}
 	
 	}	

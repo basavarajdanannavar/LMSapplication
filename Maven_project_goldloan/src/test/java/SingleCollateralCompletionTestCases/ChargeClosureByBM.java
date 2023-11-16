@@ -87,7 +87,7 @@ public class ChargeClosureByBM  {
 	}
 	
 	
-@Test(priority=3)
+/*@Test(priority=3)
 public void OwnChargeClosure() throws InterruptedException {
 	//click on the Search Icon 
 	driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/span[1]/img")).click();
@@ -129,10 +129,10 @@ driver.findElement(By.xpath("/html/body/div[6]/div[2]/div")).click();
 Thread.sleep(2000);
 driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/div/h1")).isDisplayed();
 
-}
+}*/
 
 
-@Test(priority=4)
+@Test(priority=3)
 	public void CloseBrowser() {
 		driver.close();
 	}

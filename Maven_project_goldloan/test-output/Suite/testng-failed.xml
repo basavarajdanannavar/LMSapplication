@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ApproveCollateral(failed)">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SingleCollateralCompletionTestCases.AddCollateral">
+      <class name="SingleCollateralCompletionTestCases.RequestMovementCompletionByFO2">
         <methods>
-          <include name="AddOrnaments"/>
-          <include name="CloseBrowser"/>
-          <include name="Browser"/>
-          <include name="SubmitCollateral"/>
-          <include name="AddPacketWithPacketID"/>
+          <include name="TrackOngoingTrip"/>
         </methods>
-      </class> <!-- SingleCollateralCompletionTestCases.AddCollateral -->
-      <class name="SingleCollateralCompletionTestCases.ApproveCollateralByBM">
+      </class> <!-- SingleCollateralCompletionTestCases.RequestMovementCompletionByFO2 -->
+      <class name="SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM3">
+        <methods>
+          <include name="ChargeRequestFormFillup"/>
+        </methods>
+      </class> <!-- SingleCollateralCompletionTestCases.ChargeAndMovementRequestByBM3 -->
+      <class name="SingleCollateralCompletionTestCases.RequestMovementInprogressAbandonByFO">
+        <methods>
+          <include name="TrackOngoingTrip"/>
+        </methods>
+      </class> <!-- SingleCollateralCompletionTestCases.RequestMovementInprogressAbandonByFO -->
+      <class name="SingleCollateralCompletionTestCases.ChargeClosureByBM">
+        <methods>
+          <include name="OwnChargeClosure"/>
+        </methods>
+      </class> <!-- SingleCollateralCompletionTestCases.ChargeClosureByBM -->
+      <class name="SingleCollateralCompletionTestCases.DraftCollateralSubmission">
+        <methods>
+          <include name="SubmitCollateral"/>
+          <include name="Browser"/>
+        </methods>
+      </class> <!-- SingleCollateralCompletionTestCases.DraftCollateralSubmission -->
+      <class name="SingleCollateralCompletionTestCases.RejectCollateralByBM2">
         <methods>
           <include name="CollateralAdditionLink"/>
-          <include name="CloseBrowser"/>
         </methods>
-      </class> <!-- SingleCollateralCompletionTestCases.ApproveCollateralByBM -->
+      </class> <!-- SingleCollateralCompletionTestCases.RejectCollateralByBM2 -->
     </classes>
-  </test> <!-- ApproveCollateral(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

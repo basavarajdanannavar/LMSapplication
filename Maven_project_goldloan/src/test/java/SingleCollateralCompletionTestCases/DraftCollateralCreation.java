@@ -101,7 +101,7 @@ public void AddCollaterl() throws InterruptedException {
 	driver.findElement(By.xpath("//strong[contains(text(),'Karnataka')]")).click();
 	//District	
 	driver.findElement(By.cssSelector("[placeholder='Select district']")).click();
-	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/div/input")).sendKeys("Dharwad Area");
+	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/div/input")).sendKeys(" Area");
 	
 	driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/form/select-location/div[5]/div/ul/li")).click();
 	//Branch

@@ -130,7 +130,7 @@ Thread.sleep(1000);
 		
 		//Click on Branch
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[3]/input")).click();
-		driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/div/form/select-location/div[5]/div/div/input")).sendKeys("HDFC-Dharwad");
+		driver.findElement(By.xpath("//*[@id=\"body\"]/div[2]/div[2]/div/div/form/select-location/div[5]/div/div/input")).sendKeys("HDFC- Dharwad");
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/form/select-location/div[5]/div/ul/li")).click();
 		
 		

@@ -91,7 +91,7 @@ public class RejectChargeConfirmationByBM  {
         Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/div/h1")).isDisplayed();
         
-		
+		Thread.sleep(3000);
 		}
 	@Test(priority=3)
 	public void CloseBrowser() {
